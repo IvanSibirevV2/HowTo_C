@@ -11,11 +11,35 @@ int main()
     std::cout << y;
     //Если так сделать то будет ошибка
     */
-    int y;
-    int x=6;
-    x = 5;
-    std::cout << x;
-    std::cout << "Hello World!\n";
+    if(false)
+    {
+        std::cout << "If 1" << std::endl;
+        int y;
+        int x=6;
+        x = 5;
+        std::cout << x;
+        std::cout << "Hello, world!" << std::endl;
+        //Переход на следующую строку...
+        std::cout << "Hello, world!" << std::endl;
+    }
+    else if (false)
+    {
+        std::cout << "If 2" << std::endl;
+        int a = 6;
+        a = a - 3;
+        std::cout << a << std::endl; // №1
+        int b = a;
+        std::cout << b << std::endl; // №2
+        // В этом случае a + b является r-value 
+        std::cout << a + b << std::endl; // №3
+        std::cout << a << std::endl; // №4
+        int c=0;
+        std::cout << c << std::endl; // №5
+    }else if (!false)
+    {
+     
+    }
+    return 0;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
