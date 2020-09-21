@@ -7,16 +7,13 @@ int add(int x, int y);
 
 int main()
 {
-    std::cout << "The sum of 3 and 4 is: " << add(3, 4) << std::endl;
     std::cout << "Hello World!\n";
-    return 0;
 }
 
 int add(int x, int y)
 {
     return x + y;
 }
-
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
 // Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
 
