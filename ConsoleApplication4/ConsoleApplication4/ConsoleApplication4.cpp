@@ -2,11 +2,11 @@
 //
 
 #include <iostream>
-
+void doSomething();
 
 int main()
 {
-    if (!false) 
+    if (false) 
     {
         //оБЛАСТЬ ДЕЙСТВИЯ - ВЕСЬ ФАЙЛ, ИЛИ ВЕСЬ ПРОЕКТ - НУЖНО ПРОВЕРИТЬ
         #define MY_FAVORITE_NUMBER 7
@@ -22,13 +22,39 @@ int main()
         std::cout << "USE_YEN_NOT - NOT Define\n";
         #endif
     }
-    else if (false)
+    else if (!false)
     {
-         
+        #define PRINT
+        #undef PRINT
+        #ifdef PRINT
+        std::cout << "Printing!";
+        #endif
+        #ifndef PRINT
+        std::cout << "Not printing!";
+        #endif
+        #undef PRINT
+        #define PRINT
+        doSomething();
+    }
+    else if (!false)
+    {
+
+    }
+    else if (!false)
+    {
+
     }
     std::cout << "Hello World!\n";
 }
-
+void doSomething()
+{
+#ifdef PRINT
+    std::cout << "Printing!";
+#endif
+#ifndef PRINT
+    std::cout << "Not printing!";
+#endif
+}
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
 // Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
 
