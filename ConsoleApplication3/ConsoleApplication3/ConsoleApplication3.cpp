@@ -1,19 +1,38 @@
 ﻿// ConsoleApplication3.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
-
 #include <iostream>
+#include "add.h"
+
+int main()
+{
+    std::cout << "И как эту фигню замутить:" << std::endl;
+    std::cout << "1) Создать Add.cpp" << std::endl;
+    std::cout << "2) Создать Add.h" << std::endl;
+    std::cout << "3) Докинуть программный код и все инклюды...=> Add.cpp" << std::endl;
+    std::cout << "4) Докинуть заголовки => Add.h" << std::endl;
+    std::cout << "The sum of 3 and 4 is " << add(3, 4) << std::endl;
+    HelloWorlda();
+    return 0;
+}
+/*
+#include <iostream>
+#include "add.cpp"
 //Предобъявление функции
 int add(int x, int y);
+void HelloWorlda();
 
 int main()
 {
     std::cout << "Hello World!\n";
+    HelloWorlda();
 }
 
-int add(int x, int y)
+int add(int x, int y){return x + y;}
+void HelloWorlda() 
 {
-    return x + y;
+    std::cout << "HelloWorlda!\n";
 }
+*/
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
 // Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
 
