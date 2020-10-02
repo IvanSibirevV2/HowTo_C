@@ -1,0 +1,225 @@
+/*@import 'https://fonts.googleapis.com/css?family=Lora|Ubuntu+Mono';*/
+
+body
+{
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  background-color: WhiteSmoke;
+  text-align: justify;
+  font-size: 120%;
+  padding-left: 3%;
+  padding-right: 3%;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+}
+
+h1
+{
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  background-color: Gainsboro;
+  font-size: 150%;
+  text-align: center;
+
+  padding: 0.5em 1.5em;
+  border-radius: 0.8em;
+  box-shadow: 0.1em 0.1em 0.2em #888888;
+}
+
+h2
+{
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  background-color: Gainsboro;
+  box-shadow: 0 0 0.2em #888888;
+  padding: 0.2em 1em;
+  font-size: 140%;
+  text-align: center;
+}
+
+h3
+{
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 130%;
+  text-align: center;
+}
+
+nav::before
+{
+  content: "Содержание страницы";
+  font-weight: bold;
+}
+
+.title
+{
+  background-color: Salmon;
+}
+
+.author
+{
+  background-color: WhiteSmoke;
+  text-align: center;
+  box-shadow: none;
+  font-size: 120%;
+}
+
+.date
+{
+  background-color: WhiteSmoke;
+  text-align: center;
+  font-size: 100%;
+}
+
+.nb
+{
+  background-color: Lavender;
+  box-shadow: 0 0 0.2em #888888;
+  font-size: 95%;
+  padding: 0.2em 1.2em;
+}
+
+.def
+{
+  box-shadow: 0 0 0.2em #888888;
+  background-color: AntiqueWhite;
+  padding: 0.1em 1.2em;
+  border-radius: 0.8em;
+}
+
+.eng
+{
+  font-style: italic;
+  background-color: #fffa70;
+  border-radius: 0.3em;
+  padding: 0 0.3em;
+}
+
+.syntax
+{
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 90%;
+  color: Blue;
+  background-color: White;
+  border-radius: 0.3em;
+  padding: 0.2em 0.3em;
+}
+
+.marks
+{
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  background-color: Gold;
+  font-size: 110%;
+  text-align: center;
+  padding: 0.4em 1em;
+  border-radius: 0.8em;
+  box-shadow: 0.1em 0.1em 0.2em #888888;
+  width: 6em;
+}
+
+.cpplink
+{
+  background-color: SkyBlue;
+  text-align: center;
+  padding: 0.2em 0.6em;
+  border-radius: 0.6em;
+  box-shadow: 0.2em 0.2em 0.3em #888888;
+  width: 4em;
+}
+
+.formula img
+{
+  border: 2em solid transparent;
+  box-shadow: none;
+}
+
+
+pre
+{
+  border: 0.15em solid #a2a2a2;
+  box-shadow: 0 0 0.2em #888888;
+  padding: 0.8em 0.8em;
+}
+
+code
+{
+  font-family: "Lucida Console", Monaco, monospace;
+  line-height: 90%;
+  font-size: 95%;
+  letter-spacing: 0.02em;
+  background-color: transparent;
+}
+
+blockquote
+{
+  text-align: right;
+  quotes: "«" "»";
+  font-style: italic;
+}
+
+figure
+{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+figcaption
+{
+  text-align: center;
+}
+
+
+table
+{
+  border-collapse: collapse;
+  border: 0.15em solid DarkGray;
+  box-shadow: 0 0 0.2em #888888; /* doesn't work in IE11 with collapsing borders */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th, td
+{
+  border: 0.15em solid DarkGray;
+  padding: 0.3em 1em;
+  background-color: AntiqueWhite;
+}
+
+table > caption
+{
+  border: 0.15em solid DarkGray;
+  padding: 0.3em 1em;
+  box-shadow: 0 0 0.2em #888888;
+  background-color: PaleGoldenRod;
+}
+
+
+img
+{
+  border: 0.5em solid White;
+  box-shadow: 0 0 0.2em #888888;
+}
+
+
+:target
+{
+  background-color: Khaki;
+  box-shadow: 0 0 0.4em Yellow;
+}
+
+a:link
+{
+  color: Blue;
+}
+
+a:visited
+{
+  color: DarkMagenta;
+}
+
+a:hover
+{
+  text-shadow: 0 0 0.3em Blue;
+}
+
+a:active
+{
+  text-shadow: 0 0 0.3em Red;
+}
