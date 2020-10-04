@@ -2,10 +2,48 @@
 //
 
 #include <iostream>
+#include <cstdint>
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    ////////////////////////////////////////////////////////////////////////////////////////////
+    //Попробуйте гавести курсор на int16_t и нажать F12
+    ////////////////////////////////////////////////////////////////////////////////////////////
+    {std::int8_t x('W');std::cout <<"<sizeof(typedef signed char        int8_t),x>=<"<< sizeof(x) <<","<< x <<">"<< std::endl;}
+    {std::int16_t x(5);std::cout << "<sizeof(typedef short              int16_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    {std::int32_t x(5);std::cout << "<sizeof(typedef int                int32_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    {std::int64_t x(5);std::cout << "<sizeof(typedef long long          int64_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    {std::uint8_t x('W');std::cout << "<sizeof(typedef unsigned char      uint8_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    {std::uint16_t x(5);std::cout << "<sizeof(typedef unsigned short     uint16_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    {std::uint32_t x(5);std::cout << "<sizeof(typedef unsigned int       uint32_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    {std::uint64_t x(5);std::cout << "<sizeof(typedef unsigned long long uint64_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    {std::int_least8_t x('W');std::cout << "<sizeof(typedef signed char        int_least8_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    {std::int_least16_t x(5);std::cout << "<sizeof(typedef short              int_least16_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    {std::int_least32_t x(5);std::cout << "<sizeof(typedef int                int_least32_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    {std::int_least64_t x(5);std::cout << "<sizeof(typedef long long          int_least64_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    {std::uint_least8_t x(5);std::cout << "<sizeof(typedef unsigned char      uint_least8_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    {std::uint_least16_t x(5);std::cout << "<sizeof(typedef unsigned short     uint_least16_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    {std::uint_least32_t x(5);std::cout << "<sizeof(typedef unsigned int       uint_least32_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    {std::uint_least64_t x(5);std::cout << "<sizeof(typedef unsigned long long uint_least64_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    {std::int_fast8_t x('W');std::cout << "<sizeof(typedef signed char        int_fast8_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    {std::int_fast16_t x(5);std::cout << "<sizeof(typedef int                int_fast16_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    {std::int_fast32_t x(5);std::cout << "<sizeof(typedef int                int_fast32_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    {std::int_fast64_t x(5);std::cout << "<sizeof(typedef long long          int_fast64_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    {std::uint_fast8_t x('W');std::cout << "<sizeof(typedef unsigned char      uint_fast8_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    {std::uint_fast16_t x(5);std::cout << "<sizeof(typedef unsigned int       uint_fast16_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    {std::uint_fast32_t x(5);std::cout << "<sizeof(typedef unsigned int       uint_fast32_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    {std::uint_fast64_t x(5);std::cout << "<sizeof(typedef unsigned long long uint_fast64_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    {std::intmax_t x(5);std::cout << "<sizeof(typedef long long          intmax_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    {std::uintmax_t x=5;std::cout << "<sizeof(typedef unsigned long long uintmax_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
+    ////////////////////////////////////////////////////////////////////////////////////////////
+    /*
+
+;
+
+;
+;
+
+    */
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
