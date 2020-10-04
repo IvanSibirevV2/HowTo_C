@@ -36,14 +36,7 @@ int main()
     {std::intmax_t x(5);std::cout << "<sizeof(typedef long long          intmax_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
     {std::uintmax_t x=5;std::cout << "<sizeof(typedef unsigned long long uintmax_t),x>=<" << sizeof(x) << "," << x << ">" << std::endl;}
     ////////////////////////////////////////////////////////////////////////////////////////////
-    /*
 
-;
-
-;
-;
-
-    */
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
