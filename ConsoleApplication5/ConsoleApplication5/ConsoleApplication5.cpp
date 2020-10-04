@@ -17,10 +17,18 @@ int main()
     std::cout << "float:\t\t" << sizeof(float) << " bytes" << std::endl;
     std::cout << "double:\t\t" << sizeof(double) << " bytes" << std::endl;
     std::cout << "long double:\t" << sizeof(long double) << " bytes" << std::endl;
+    std::cout << "///////////////////////////////////////////////////////////////////////////" << std::endl;
     ////////////////////////////////////////////////////////////////////////////////////////////////////////
     int x;
     std::cout << "x is " << sizeof(x) << " bytes" << std::endl;
+    std::cout << "///////////////////////////////////////////////////////////////////////////" << std::endl;
     ////////////////////////////////////////////////////////////////////////////////////////////////////////
+    std::cout << "short int:\t" << sizeof(short int) << " bytes" << std::endl;
+    std::cout << "long int:\t" << sizeof(long int) << " bytes" << std::endl;
+    std::cout << "long long int:\t" << sizeof(long long int) << " bytes" << std::endl;
+    std::cout << "unsigned short:\t" << sizeof(unsigned short) << " bytes" << std::endl;
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
