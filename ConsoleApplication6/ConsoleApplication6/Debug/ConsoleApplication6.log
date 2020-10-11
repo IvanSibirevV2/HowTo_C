@@ -1,4 +1,0 @@
-﻿  ConsoleApplication6.cpp
-C:\D\Git_Hub\HowTo_C\ConsoleApplication6\ConsoleApplication6\ConsoleApplication6.cpp(40,27): error C2039: "setprecision": не является членом "std".
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\iostream(19): message : см. объявление "std"
-C:\D\Git_Hub\HowTo_C\ConsoleApplication6\ConsoleApplication6\ConsoleApplication6.cpp(40,39): error C3861: setprecision: идентификатор не найден

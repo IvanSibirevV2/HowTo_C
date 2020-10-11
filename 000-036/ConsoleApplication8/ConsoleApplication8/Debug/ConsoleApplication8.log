@@ -1,0 +1,5 @@
+﻿  ConsoleApplication8.cpp
+C:\D\Git_Hub\HowTo_C\ConsoleApplication8\ConsoleApplication8\ConsoleApplication8.cpp(53,22): warning C4305: инициализация: усечение из "int" в "char"
+C:\D\Git_Hub\HowTo_C\ConsoleApplication8\ConsoleApplication8\ConsoleApplication8.cpp(53,17): warning C4309: инициализация: усечение константного значения
+C:\D\Git_Hub\HowTo_C\ConsoleApplication8\ConsoleApplication8\ConsoleApplication8.cpp(9,14): warning C4101: b: неиспользованная локальная переменная
+  ConsoleApplication8.vcxproj -> C:\D\Git_Hub\HowTo_C\ConsoleApplication8\Debug\ConsoleApplication8.exe
