@@ -15,7 +15,7 @@ _forceinline double Summma_2(double a, double b) { return a + b; }
 
 int main()
 {
-    if (false)
+    if (!false)
     {
         //Сложения чисел На время
         std::cout << "c = a + b;" << std::endl;

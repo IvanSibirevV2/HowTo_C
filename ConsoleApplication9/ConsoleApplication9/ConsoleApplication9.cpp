@@ -2,9 +2,35 @@
 //
 
 #include <iostream>
-
+#include <stdio.h>
 int main()
 {
+    __int64 a(3);
+    __asm {
+        //mov         dword ptr[a], 3
+        //mov         dword ptr[ebp - 8], 0
+    }
+    __int64 b(4);
+    __asm {
+        //mov         dword ptr[b], 4
+        //mov         dword ptr[ebp - 18h], 0
+    }
+    __int64 c(0);
+    __asm {
+        //xorps       xmm0, xmm0
+        //movlpd      qword ptr[c], xmm0
+    }
+    //c = a + b;
+    __asm {
+        mov         eax, dword ptr[a]
+        //
+        add         eax, dword ptr[b]
+        mov         ecx, dword ptr[ebp - 8]
+        adc         ecx, dword ptr[ebp - 18h]
+        mov         dword ptr[c], eax
+        mov         dword ptr[ebp - 28h], ecx
+    }
+
     int x = 1;
     std::cout << x << " ";
 
