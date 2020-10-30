@@ -1,33 +1,14 @@
 ﻿// ConsoleApplication13.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
+
 #include <iostream>
-///////////////////////////////////////////////////////////////////////////////////////
-void incrementAndPrint()
-{
-    int value = 1; // автоматическая продолжительность жизни (по умолчанию)
-    ++value;
-    std::cout << value << std::endl;
-} // переменная value уничтожается здесь
-void staticincrementAndPrint()
-{
-    static int s_value = 1; // переменная s_value является статической
-    ++s_value;
-    std::cout << s_value << std::endl;
-} // переменная s_value не уничтожается здесь, но становится недоступной
-int generateID()
-{
-    static int s_itemID = 0;
-    return s_itemID++;
-}
+
 int main()
 {
-    incrementAndPrint();
-    incrementAndPrint();
-    incrementAndPrint();
-
-    staticincrementAndPrint();
-    staticincrementAndPrint();
-    staticincrementAndPrint();
+    {
+        using std::cout; // "using-объявление" сообщает компилятору, что cout следует обрабатывать, как std::cout
+        cout << "Hello, world!\n"; // и никакого префикса std:: уже здесь не нужно!
+    }
     std::cout << "Hello World!\n";
 }
 
