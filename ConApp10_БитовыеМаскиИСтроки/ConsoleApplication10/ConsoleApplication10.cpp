@@ -21,11 +21,8 @@ std::string show_bits(int a)
     }
     return _ResStr;
 }
-
-////////////////////////////////////////////////////////////////////////////////////
-int main()
+void _test1 ()
 {
-    /*
     try
     {
         throw "HelloWorld";
@@ -35,9 +32,10 @@ int main()
         std::cerr << "Error:20201022_0954: " << exception << '\n';
         throw "HelloWorld";
     }
-    */
-
-    if (!false) 
+}
+void _test2()
+{
+    if (!false)
     {
         //Дело вот в чем//Есть команда, которой получаем побитовое представление числа для вывода на экран
         //В основном используется при изучении сдвигов
@@ -59,22 +57,22 @@ int main()
     {
         //Альтернативный способ применения сего
         std::cout << show_bits(0b101010) << "\n";
-        std::cout << show_bits(0b101010<<1) << "\n";
-        std::cout << show_bits(0b101010>> 1) << "\n";
+        std::cout << show_bits(0b101010 << 1) << "\n";
+        std::cout << show_bits(0b101010 >> 1) << "\n";
     }
     else if (false)
     {
         //Альтернативный способ применения сего
         int i = 0b101010;
         std::cout << show_bits(i) << "\n";
-        std::cout << show_bits(i<<1) << "\n";
+        std::cout << show_bits(i << 1) << "\n";
         std::cout << show_bits(i) << "\n";
     }
     else if (false)
     {
         //Альтернативный способ применения сего
         for (int i = 0;i < 18;i++)
-            std::cout <<"var <<"<<i<<" "<< show_bits(0b101010 << i) << "\n";
+            std::cout << "var <<" << i << " " << show_bits(0b101010 << i) << "\n";
         //Результат сдвига, он логический
     }
     ////////////////////////////////////////////////////////////
@@ -85,13 +83,24 @@ int main()
         int i = 0;
         i = i | 0b00000010;
         i = i | 0b00100000;
-        if (i & 0b00000010)std::cout <<"0b00000010"<< "BitFlag is ON" << "\n";
-        if (i & 0b00000001) {}else std::cout << "0b00000001" << "BitFlag is OFF" << "\n";
+        if (i & 0b00000010)std::cout << "0b00000010" << "BitFlag is ON" << "\n";
+        if (i & 0b00000001) {}
+        else std::cout << "0b00000001" << "BitFlag is OFF" << "\n";
     }
     else if (!false)
     {
-        
+
     }
+}
+////////////////////////////////////////////////////////////////////////////////////
+int main()
+{
+    if (!false){_test1();}//Генератор исключительных ситуаций
+    else if (false) { _test2(); }//Выдача строкового представления машннного слова
+    else if (false)
+    {
+    }
+    
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
