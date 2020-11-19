@@ -1,0 +1,160 @@
+std::string _str = "";
+=>{
+	*** push offset string "" (0160DCBh)  
+	*** lea ecx,[_str]  
+	call std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> > (015106Eh)  
+	//jmp std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> > (015BC30h) 
+	=>{
+		basic_string(_In_z_ const _Elem* const _Ptr) : _Mypair(_Zero_then_variadic_args_t{}) {
+		//push
+		/*
+		ebp=esp
+		//Адрес области данных
+		//esp - Теперь может меняться
+		//Например, ebp-8 - облатьсь паляти какой-то локальной переменной.
+		//Происходит выделение памяти в стеке,
+		//то биш в его области оперативной памяти, относительно ebp
+		//Или как esp+N+var -
+		//где +N+var - смещение согласно погодным условиям асемблера
+		//N - номер переменной
+		//Смешение на значение переменной или до нужного элемента массива.
+		//////////////////////////////////////////////////////////////
+		push ebp
+		mov         ebp,esp  
+		//Since SEH is a linked list there are actually two addresses.
+		//The first one is the address of the next handler (in case of chaining) or 0xFFFFFFFF (-1) is this is the last one. The next one is the actual SE Handler.
+		//An old but good read about SEH is "A Crash Course on the Depths of Win32™ Structured Exception Handling".
+		//По русски говоря разметка для линкера с++ он начале функции
+		push        0FFFFFFFFh
+		push        15E185h
+		//////////////////////////////////////////////////////////////
+		//https://forum.reverse4you.org/t/topic/1121
+		//Антиотладочные приемы
+		// В общем антиотладочные приемы, логирование ваших попыток отладки
+		// Выход при попытки интроспекции
+		// Использование защитных куков
+		mov         eax,dword ptr fs:[00000000h]  
+		push        eax  
+		sub         esp,104h  
+		push        ebx  
+		push        esi  
+		push        edi  
+		push        ecx  
+		lea         edi,[ebp-110h]  
+		mov         ecx,41h  
+		mov         eax,0CCCCCCCCh  
+		rep stos    dword ptr es:[edi]  
+		pop         ecx  
+		mov         eax,dword ptr [__security_cookie (0164008h)]  
+		//001513D9  jmp         __CheckForDebuggerJustMyCode (0158600h)  
+		=>{
+			void __fastcall __CheckForDebuggerJustMyCode(unsigned char *JMC_flag)
+			{
+			00158600  push        ebp  
+			00158601  mov         ebp,esp  
+			00158603  sub         esp,8  
+			00158606  mov         dword ptr [JMC_flag],ecx  
+			unsigned char *__DebuggerLocalJMCFlag = JMC_flag;
+			0158609  mov         eax,dword ptr [JMC_flag]  
+			0015860C  mov         dword ptr [__DebuggerLocalJMCFlag],eax  
+			if (*JMC_flag && __DebuggerCurrentSteppingThreadId != 0 && __DebuggerCurrentSteppingThreadId == GetCurrentThreadId()) {
+			0015860F  mov         ecx,dword ptr [JMC_flag]  
+			00158612  movzx       edx,byte ptr [ecx]  
+			00158615  test        edx,edx  
+			00158617  je          NopLabel+1h (0158631h)  
+			00158619  cmp         dword ptr [__DebuggerCurrentSteppingThreadId (016475Ch)],0  
+			00158620  je          NopLabel+1h (0158631h)  
+			00158622  call        dword ptr [__imp__GetCurrentThreadId@0 (0165054h)]  
+			00158628  cmp         dword ptr [__DebuggerCurrentSteppingThreadId (016475Ch)],eax  
+			0015862E  jne         NopLabel+1h (0158631h)  
+			NopLabel:
+					__nop();
+			00158630  nop  
+				}
+			}
+			}
+0015BC63  xor         eax,ebp  
+0015BC65  mov         dword ptr [ebp-10h],eax  
+0015BC68  push        eax  
+0015BC69  lea         eax,[ebp-0Ch]  
+0015BC6C  mov         dword ptr fs:[00000000h],eax  
+0015BC72  mov         dword ptr [this],ecx  
+0015BC75  mov         ecx,167018h  
+
+0015BC7A  call        @__CheckForDebuggerJustMyCode@4 (01513D9h)  
+0015BC7F  movzx       eax,byte ptr [ebp-109h]  
+0015BC86  push        eax  
+0015BC87  mov         ecx,dword ptr [this]  
+0015BC8A  call        std::_Compressed_pair<std::allocator<char>,std::_String_val<std::_Simple_types<char> >,1>::_Compressed_pair<std::allocator<char>,std::_String_val<std::_Simple_types<char> >,1><> (01511F9h)  
+0015BC8F  mov         dword ptr [ebp-4],0  
+//////////////////////////////////////////////////////////////////////
+	auto&& _Alproxy = _GET_PROXY_ALLOCATOR(_Alty, _Getal());
+0015BC96  mov         ecx,dword ptr [this]  
+0015BC99  call        std::_Compressed_pair<std::allocator<char>,std::_String_val<std::_Simple_types<char> >,1>::~_Compressed_pair<std::allocator<char>,std::_String_val<std::_Simple_types<char> >,1> (0151325h)  
+0015BC9E  push        eax  
+0015BC9F  lea         ecx,[ebp-2Dh]  
+0015BCA2  call        std::allocator<std::_Container_proxy>::allocator<std::_Container_proxy><char> (015149Ch)  
+0015BCA7  lea         eax,[ebp-2Dh]  
+0015BCAA  mov         dword ptr [_Alproxy],eax  
+	_Container_proxy_ptr<_Alty> _Proxy(_Alproxy, _Mypair._Myval2);
+0015BCAD  mov         eax,dword ptr [this]  
+0015BCB0  push        eax  
+0015BCB1  mov         ecx,dword ptr [_Alproxy]  
+0015BCB4  push        ecx  
+0015BCB5  lea         ecx,[_Proxy]  
+0015BCB8  call        std::min<unsigned int> (01513A7h)  
+0015BCBD  mov         byte ptr [ebp-4],1  
+	_Tidy_init();
+0015BCC1  mov         ecx,dword ptr [this]  
+0015BCC4  call        std::_Container_base12::_Swap_proxy_and_iterators (01510B9h)  
+	assign(_Ptr);
+0015BCC9  mov         eax,dword ptr [_Ptr]  
+0015BCCC  push        eax  
+0015BCCD  mov         ecx,dword ptr [this]  
+0015BCD0  call        _test2 (01513D4h)  
+	_Proxy._Release();
+0015BCD5  lea         ecx,[_Proxy]  
+0015BCD8  call        std::_Container_base12::_Orphan_all (01512E4h)  
+}xor         eax,ebp  
+	0015BC65  mov         dword ptr [ebp-10h],eax  
+	0015BC68  push        eax  
+	0015BC69  lea         eax,[ebp-0Ch]  
+	0015BC6C  mov         dword ptr fs:[00000000h],eax  
+	0015BC72  mov         dword ptr [this],ecx  
+	0015BC75  mov         ecx,167018h  
+	0015BC7A  call        @__CheckForDebuggerJustMyCode@4 (01513D9h)  
+	0015BC7F  movzx       eax,byte ptr [ebp-109h]  
+	0015BC86  push        eax  
+	0015BC87  mov         ecx,dword ptr [this]  
+	0015BC8A  call        std::_Compressed_pair<std::allocator<char>,std::_String_val<std::_Simple_types<char> >,1>::_Compressed_pair<std::allocator<char>,std::_String_val<std::_Simple_types<char> >,1><> (01511F9h)  
+	0015BC8F  mov         dword ptr [ebp-4],0  
+			auto&& _Alproxy = _GET_PROXY_ALLOCATOR(_Alty, _Getal());
+	0015BC96  mov         ecx,dword ptr [this]  
+	0015BC99  call        std::_Compressed_pair<std::allocator<char>,std::_String_val<std::_Simple_types<char> >,1>::~_Compressed_pair<std::allocator<char>,std::_String_val<std::_Simple_types<char> >,1> (0151325h)  
+	0015BC9E  push        eax  
+	0015BC9F  lea         ecx,[ebp-2Dh]  
+	0015BCA2  call        std::allocator<std::_Container_proxy>::allocator<std::_Container_proxy><char> (015149Ch)  
+	0015BCA7  lea         eax,[ebp-2Dh]  
+	0015BCAA  mov         dword ptr [_Alproxy],eax  
+			_Container_proxy_ptr<_Alty> _Proxy(_Alproxy, _Mypair._Myval2);
+	0015BCAD  mov         eax,dword ptr [this]  
+	0015BCB0  push        eax  
+	0015BCB1  mov         ecx,dword ptr [_Alproxy]  
+	0015BCB4  push        ecx  
+	0015BCB5  lea         ecx,[_Proxy]  
+	0015BCB8  call        std::min<unsigned int> (01513A7h)  
+	0015BCBD  mov         byte ptr [ebp-4],1  
+			_Tidy_init();
+	0015BCC1  mov         ecx,dword ptr [this]  
+	0015BCC4  call        std::_Container_base12::_Swap_proxy_and_iterators (01510B9h)  
+			assign(_Ptr);
+	0015BCC9  mov         eax,dword ptr [_Ptr]  
+	0015BCCC  push        eax  
+	0015BCCD  mov         ecx,dword ptr [this]  
+	0015BCD0  call        _test2 (01513D4h)  
+			_Proxy._Release();
+	0015BCD5  lea         ecx,[_Proxy]  
+	0015BCD8  call        std::_Container_base12::_Orphan_all (01512E4h)  
+}   
+}
+}

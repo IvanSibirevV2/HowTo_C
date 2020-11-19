@@ -1,0 +1,14 @@
+std::string _str = "";
+<{
+	
+	#define _In_ _SAL2_Source_(_In_, (), _Pre1_impl_(__notnull_impl_notref) _Pre_valid_impl_ _Deref_pre1_impl_(__readaccess_impl_notref))
+	#define _In_z_ _SAL2_Source_(_In_z_, (),     _In_     _Pre1_impl_(__zterm_impl))
+basic_string(_In_z_ const _Elem* const _Ptr) : _Mypair(_Zero_then_variadic_args_t{})
+{
+	auto&& _Alproxy = _GET_PROXY_ALLOCATOR(_Alty, _Getal());
+	_Container_proxy_ptr<_Alty> _Proxy(_Alproxy, _Mypair._Myval2);
+	_Tidy_init();
+	assign(_Ptr);
+	_Proxy._Release();
+}
+}>
