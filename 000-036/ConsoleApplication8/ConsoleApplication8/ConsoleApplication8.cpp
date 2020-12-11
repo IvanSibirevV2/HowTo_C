@@ -53,9 +53,6 @@ int main()
         char ch('56');
         std::cout << ch << " has ASCII code " << static_cast<int>(ch) << std::endl;
     }
-    {
-        
-    }
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

@@ -7,9 +7,19 @@ int main()
 {
     {
         using std::cout; // "using-объявление" сообщает компилятору, что cout следует обрабатывать, как std::cout
-        cout << "Hello, world!\n"; // и никакого префикса std:: уже здесь не нужно!
+        cout << "Hello, world!"<<std::endl; // и никакого префикса std:: уже здесь не нужно!
+    }
+    {
+        std::string myName;
+        std::cin>>myName;
+        std::cout << std::endl;
+        std::cout << myName << std::endl;
+    }
+    {
+
     }
     std::cout << "Hello World!\n";
+    system("Pause");
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
